@@ -2,10 +2,10 @@ from odoo import fields, models
 
 
 class RealEstateProperty(models.Model):
-    _name = 'real.estate.property'
+    _name = 'real.estate'
     _description = 'Real Estate Property'
 
-    name = fields.Char(string='Name')
+    name = fields.Char(string='Name', required=True)
     description = fields.Text(string='Description')
     price = fields.Float(string='Price')
     bedrooms = fields.Integer(string='Bedrooms')

@@ -10,6 +10,9 @@
     'depends': ['crm'],
     'application': True,
     'data': [
-        'views/estate_menus.xml',
+        'security/res_groups.xml',
+    ],
+    'demo': [
+        'demo/demo.xml',
     ],
 }
