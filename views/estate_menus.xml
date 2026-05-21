@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="estate_menu_root"
+        name="Real Estate"
+        web_icon="estate,static/description/icon.png"
+        sequence="26"/>
+
+    <!-- Temporary: opens CRM pipeline until estate models exist -->
+    <menuitem
+        id="estate_menu_properties"
+        name="Properties"
+        parent="estate_menu_root"
+        action="crm.crm_lead_action_pipeline"
+        sequence="1"/>
+</odoo>
