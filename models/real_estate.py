@@ -1,5 +1,5 @@
-from odoo import models
-from dataclasses import fields
+from odoo import fields, models
+
 
 class RealEstateProperty(models.Model):
     _name = 'real.estate.property'
@@ -11,4 +11,7 @@ class RealEstateProperty(models.Model):
     bedrooms = fields.Integer(string='Bedrooms')
     bathrooms = fields.Integer(string='Bathrooms')
     area = fields.Float(string='Area')
-    property_type = fields.Selection(string='Property Type')
+    property_type = fields.Selection(
+        selection=[('house', 'House'), ('apartment', 'Apartment')],
+        string='Property Type',
+    )
