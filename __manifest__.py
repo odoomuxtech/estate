@@ -10,12 +10,9 @@
     'depends': ['crm'],
     'application': True,
     'data': [
-        # Security
         'security/res_groups.xml',
         'security/ir.model.access.csv',
-        # Views
         'views/estate_property_views.xml',
-        # Menus
         'views/estate_menus.xml',
     ],
     'demo': [
