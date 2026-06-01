@@ -15,6 +15,7 @@
                         <field name="price"/>
                     </group>
                 </sheet>
+            </form>
         </field>
     </record>
 
