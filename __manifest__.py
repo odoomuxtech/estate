@@ -10,11 +10,13 @@
     'depends': ['crm'],
     'application': True,
     'data': [
-        #views
-        'views/real_estate_views.xml',
-        #security
+        # Security
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        # Views
+        'views/estate_property_views.xml',
+        # Menus
+        'views/estate_menus.xml',
     ],
     'demo': [
         'demo/demo.xml',
