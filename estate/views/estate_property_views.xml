@@ -35,6 +35,10 @@
                     </group>
                     <group>
                         <field name="price"/>
+                        <field name="bedrooms"/>
+                        <field name="bathrooms"/>
+                        <field name="area"/>
+                        <field name="property_type"/>
                     </group>
                 </sheet>
             </form>
