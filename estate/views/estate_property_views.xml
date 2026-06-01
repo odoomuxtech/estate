@@ -10,11 +10,11 @@
                 <field name="bedrooms"/>
                 <field name="bathrooms"/>
                 <field name="area"/>
-                <field name="property_type"/>
+                <field name="property_type_id"/>
                 <filter name="filter_price" string="High Price" domain="[('price', '>=', 100000)]"/>
                 <separator/>
                 <group>
-                    <filter string="Property Type" name="group_by_property_type" context="{'group_by': 'property_type'}"/>
+                    <filter string="Property Type" name="group_by_property_type" context="{'group_by': 'property_type_id'}"/>
                     <filter string="Bedrooms" name="group_by_bedrooms" context="{'group_by': 'bedrooms'}"/>
                 </group>
             </search>
@@ -38,7 +38,10 @@
                         <field name="bedrooms"/>
                         <field name="bathrooms"/>
                         <field name="area"/>
-                        <field name="property_type"/>
+                        <field name="property_type_id"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
                     </group>
                 </sheet>
             </form>
@@ -56,7 +59,7 @@
                 <field name="bedrooms"/>
                 <field name="bathrooms"/>
                 <field name="area"/>
-                <field name="property_type"/>
+                <field name="property_type_id"/>
             </list>
         </field>
     </record>

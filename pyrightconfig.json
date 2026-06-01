@@ -1,5 +1,5 @@
 {
-  "ignore": ["__manifest__.py"],
+  "ignore": ["**/__manifest__.py"],
   "venvPath": "/Users/muhammadfarooqiqbal/odoo_development",
   "venv": "venv",
   "extraPaths": [

@@ -1,4 +1,6 @@
 {
+  "python.analysis.ignore": ["**/__manifest__.py"],
+  "cursorpyright.analysis.ignore": ["**/__manifest__.py"],
   "python.defaultInterpreterPath": "/Users/muhammadfarooqiqbal/odoo_development/venv/bin/python",
   "python.analysis.extraPaths": [
     "/Users/muhammadfarooqiqbal/odoo_development/odoo19",

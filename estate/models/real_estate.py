@@ -1,11 +1,4 @@
-from typing import Any, cast
-
 from odoo import fields, models
-
-_PROPERTY_TYPE_SELECTION = [
-    ('house', 'House'),
-    ('apartment', 'Apartment'),
-]
 
 
 class RealEstateProperty(models.Model):
@@ -18,7 +11,4 @@ class RealEstateProperty(models.Model):
     bedrooms = fields.Integer(string='Bedrooms')
     bathrooms = fields.Integer(string='Bathrooms')
     area = fields.Float(string='Area')
-    property_type = fields.Selection(
-        selection=cast(Any, _PROPERTY_TYPE_SELECTION),
-        string='Property Type',
-    )
+    property_type_id = fields.Many2one(comodel_name='estate.property.type', string='Property Type')

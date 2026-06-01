@@ -1,4 +1,11 @@
 <odoo>
+    <record id="property_type_house" model="estate.property.type">
+        <field name="name">House</field>
+    </record>
+    <record id="property_type_apartment" model="estate.property.type">
+        <field name="name">Apartment</field>
+    </record>
+
     <record id="house_1" model="real.estate">
         <field name="name">House Number 1</field>
         <field name="description">Description 1</field>
@@ -6,6 +13,6 @@
         <field name="bedrooms">3</field>
         <field name="bathrooms">2</field>
         <field name="area">100</field>
-        <field name="property_type">house</field>
+        <field name="property_type_id" ref="property_type_house"/>
     </record>
 </odoo>
