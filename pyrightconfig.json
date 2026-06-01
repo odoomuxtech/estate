@@ -1,0 +1,9 @@
+{
+  "venvPath": "/Users/muhammadfarooqiqbal/odoo_development",
+  "venv": "venv",
+  "extraPaths": [
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19",
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19/addons"
+  ],
+  "stubPath": "/Users/muhammadfarooqiqbal/odoo_development/typings"
+}

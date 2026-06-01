@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "/Users/muhammadfarooqiqbal/odoo_development/venv/bin/python",
+  "python.analysis.extraPaths": [
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19",
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19/addons"
+  ],
+  "python.analysis.stubPath": "/Users/muhammadfarooqiqbal/odoo_development/typings",
+  "cursorpyright.analysis.extraPaths": [
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19",
+    "/Users/muhammadfarooqiqbal/odoo_development/odoo19/addons"
+  ],
+  "cursorpyright.analysis.stubPath": "/Users/muhammadfarooqiqbal/odoo_development/typings"
+}
