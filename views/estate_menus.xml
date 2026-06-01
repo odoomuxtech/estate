@@ -1,5 +1,5 @@
 <odoo>
     <menuitem id="root_level" name="Root"/>
     <menuitem id="second_level" name="Estate" parent="root_level"/>
-    <menuitem id="third_level" name="Third" parent="second_level" action="estate.test_record"/>
+    <menuitem id="third_level" name="Third" parent="second_level" action="test_record"/>
 </odoo>
