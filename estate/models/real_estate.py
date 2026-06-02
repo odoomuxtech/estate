@@ -1,4 +1,15 @@
+from datetime import timedelta
+from typing import Any, cast
+
 from odoo import api, fields, models
+from odoo.tools.translate import _
+
+_GARDEN_ORIENTATION_SELECTION = [
+    ('north', 'North'),
+    ('south', 'South'),
+    ('east', 'East'),
+    ('west', 'West'),
+]
 
 
 class RealEstateProperty(models.Model):
@@ -11,7 +22,17 @@ class RealEstateProperty(models.Model):
     bedrooms = fields.Integer(string='Bedrooms')
     bathrooms = fields.Integer(string='Bathrooms')
     living_area = fields.Float(string='Living Area')
+    garden = fields.Boolean(string='Garden')
     garden_area = fields.Float(string='Garden Area')
+    garden_orientation = fields.Selection(
+        selection=cast(Any, _GARDEN_ORIENTATION_SELECTION),
+        string='Garden Orientation',
+    )
+    date_availability = fields.Date(
+        string='Available From',
+        copy=False,
+        default=lambda self: fields.Date.today() + timedelta(days=90),
+    )
     total_area = fields.Float(string='Total Area', compute='_compute_total_area')
     best_price = fields.Float(string='Best Offer', compute='_compute_best_price')
     buyer_id = fields.Many2one('res.partner', string='Buyer', copy=False)
@@ -33,3 +54,22 @@ class RealEstateProperty(models.Model):
     def _compute_best_price(self):
         for record in self:
             record.best_price = max(record.offer_ids.mapped('price'), default=0.0)
+
+    @api.onchange('garden')
+    def _onchange_garden(self):
+        if self.garden:
+            self.garden_area = 10
+            self.garden_orientation = 'north'
+        else:
+            self.garden_area = 0
+            self.garden_orientation = False
+
+    @api.onchange('date_availability')
+    def _onchange_date_availability(self):
+        if self.date_availability and self.date_availability < fields.Date.today():
+            return {
+                'warning': {
+                    'title': _('Incorrect date'),
+                    'message': _('The availability date cannot be in the past.'),
+                },
+            }
