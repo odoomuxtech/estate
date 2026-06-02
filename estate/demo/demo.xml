@@ -12,7 +12,8 @@
         <field name="price">100000</field>
         <field name="bedrooms">3</field>
         <field name="bathrooms">2</field>
-        <field name="area">100</field>
+        <field name="living_area">100</field>
+        <field name="garden_area">20</field>
         <field name="property_type_id" ref="property_type_house"/>
     </record>
 </odoo>
