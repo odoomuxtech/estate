@@ -66,7 +66,7 @@
                             <field name="partner_id"/>
                             <field name="status"/>
                             <field name="validity"/>
-                            <field name="date_deadline"/>
+                            <field name="date_deadline" force_save="1"/>
                         </list>
                     </field>
                     </page>

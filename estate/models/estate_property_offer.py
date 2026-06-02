@@ -31,6 +31,7 @@ class EstatePropertyOffer(models.Model):
         string='Deadline',
         compute='_compute_date_deadline',
         inverse='_inverse_date_deadline',
+        store=True,
     )
 
     def _get_offer_base_date(self) -> date:
@@ -48,3 +49,12 @@ class EstatePropertyOffer(models.Model):
         for offer in self:
             if offer.date_deadline:
                 offer.validity = (offer.date_deadline - offer._get_offer_base_date()).days
+
+    @api.onchange('date_deadline')
+    def _onchange_date_deadline(self):
+        if self.date_deadline:
+            self.validity = (self.date_deadline - self._get_offer_base_date()).days
+
+    @api.onchange('validity')
+    def _onchange_validity(self):
+        self.date_deadline = self._get_offer_base_date() + timedelta(days=self.validity)
