@@ -3,6 +3,7 @@
 
     <menuitem id="advertisements_level" name="Advertisements" parent="root_level" sequence="10"/>
     <menuitem id="properties_level" name="Properties" parent="advertisements_level" action="estate.test_record" sequence="10"/>
+    <menuitem id="offers_level" name="Offers" parent="advertisements_level" action="estate.estate_property_offer_action" sequence="20"/>
 
     <menuitem id="settings_level" name="Settings" parent="root_level" sequence="20"/>
     <menuitem id="property_type_level" name="Property Types" parent="settings_level" action="estate.estate_property_type_action" sequence="10"/>
