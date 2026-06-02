@@ -43,6 +43,14 @@
                     <group>
                         <field name="description"/>
                     </group>
+                    <notebook>
+                        <page string="Sales">
+                            <group>
+                                <field name="buyer_id"/>
+                                <field name="user_id"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
