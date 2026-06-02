@@ -19,3 +19,4 @@ class RealEstateProperty(models.Model):
     )
     property_type_id = fields.Many2one(comodel_name='estate.property.type', string='Property Type')
     offer_ids = fields.One2many(comodel_name='estate.property.offer', inverse_name='property_id', string='Offers')
+    tag_ids = fields.Many2many(comodel_name='estate.property.tag', string='Tags')

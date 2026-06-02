@@ -43,6 +43,10 @@
                     <group>
                         <field name="description"/>
                     </group>
+                    <group>
+                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                    </group>
+                    <separator/>
                     <notebook>
                         <page string="Sales">
                             <group>
@@ -75,6 +79,7 @@
                 <field name="bathrooms"/>
                 <field name="area"/>
                 <field name="property_type_id"/>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </list>
         </field>
     </record>
