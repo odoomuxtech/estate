@@ -22,6 +22,7 @@
             <list string="Property Tags" editable="bottom">
                 <field name="name"/>
                 <field name="color" widget="color_picker"/>
+                <button name="unlink" type="object" string="Delete" confirm="Delete this tag?"/>
             </list>
         </field>
     </record>

@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <list string="Property Types" editable="bottom">
                 <field name="name"/>
+                <button name="unlink" type="object" string="Delete" confirm="Delete this property type?"/>
             </list>
         </field>
     </record>
